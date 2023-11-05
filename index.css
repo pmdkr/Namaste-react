@@ -22,10 +22,6 @@
     margin: 10px;
 }
 
-.search{
-    padding: 10px;
-}
-
 .res-card{
     margin: 5px;
     padding: 5px;
@@ -49,4 +45,52 @@
     height: 150px;
     
     
+}
+
+.login{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+.login-btn{
+    font-size: 24px;
+    width: 120px;
+}
+.login-btn:hover{
+    cursor: pointer;
+}
+
+.shimmer-card{
+
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    
+
+}
+.shimmer-container{
+    margin:10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter{
+
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.filter-btn:hover{
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    cursor: pointer;
+}
+.search{
+    margin-right: 10px;
 }

@@ -5,14 +5,6 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 
 
-
-
-
-
-
-
-
-
 const AppLayout = () => {
 
     return (

@@ -1,15 +1,13 @@
 Namaste react🙏
 
-
-
 Namaste food using swiggy app data :
-/** 
- * 
+/**
+ *
  Header
  -logo
  -nav items(about, contacts)
- -cart 
- Body 
+ -cart
+ Body
     -serach
     -restaurants cantainer
     -restaurants card
@@ -21,7 +19,7 @@ Namaste food using swiggy app data :
  Footer
     -copyright
     -contact no
-    -address of the company 
+    -address of the company
     -links(Instagram, fb, twiter)
 
 */
