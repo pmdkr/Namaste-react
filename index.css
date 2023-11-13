@@ -94,3 +94,13 @@
 .search{
     margin-right: 10px;
 }
+
+a{
+    text-decoration: none;
+}
+.user-card{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+
+}

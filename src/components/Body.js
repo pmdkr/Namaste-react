@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-    console.log("body renderd");
+    // console.log("body renderd");
 
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
-    const [filteredRestaurant,setFilteredRestaurant]=useState([]);
+    const [filteredRestaurant, setFilteredRestaurant] = useState([]);
 
     // Whenever state variable updated, reconcilation cycle started(re -render the component).
 
@@ -34,10 +34,12 @@ const Body = () => {
 
 
     // conditional rendering
+    if (listOfRestaurant.length === 0) {
+        return <Shimmer />
+    };
 
-    return listOfRestaurant.length === 0 ? (
-        <Shimmer />
-    ) : (
+    
+    return (
         <div className="body">
             <div className="filter">
                 <div className="search">

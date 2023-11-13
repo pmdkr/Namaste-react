@@ -4,3 +4,4 @@ export const LOGO_URL="https://www.logodesign.net/logo/smoking-burger-with-lettu
 
 export const API_URL ="https://www.swiggy.com/dapi/restaurants/list/v5?lat=23.442701&lng=85.291737&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
+export const RESMENU_URl="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=23.442701&lng=85.291737&restaurantId=727850&catalog_qa=undefined&submitAction=ENTER";
