@@ -24,7 +24,7 @@ class AboutClass extends React.Component {
             <div>
 
                 <UserClass name={"Pramod Lohra"} location={"Ranchi"} contact={"pramodkrlohra@gmal.com"} />
-                <UserClass name={"Elon Musk"} location={"Us"} contact={"elon.musk@gmail.com"} />
+                
             </div>
         )
     }

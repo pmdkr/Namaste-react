@@ -4,12 +4,14 @@ import { resList } from "../utils/mockData"
 import { API_URL } from "../utils/constants";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
-    // console.log("body renderd");
+  
 
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
+    
 
     // Whenever state variable updated, reconcilation cycle started(re -render the component).
 
@@ -34,11 +36,11 @@ const Body = () => {
 
 
     // conditional rendering
-    if (listOfRestaurant.length === 0) {
+    if (listOfRestaurant?.length === 0) {
         return <Shimmer />
     };
 
-    
+
     return (
         <div className="body">
             <div className="filter">
@@ -56,7 +58,7 @@ const Body = () => {
                     <button className="search-btn" onClick={() => {
 
                         //filter the restaurant cards and upadate the UI
-                        const filteredListOfRestaurant = listOfRestaurant.filter(
+                        const filteredListOfRestaurant = listOfRestaurant?.filter(
                             (res) =>
                                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
                         );
@@ -70,7 +72,7 @@ const Body = () => {
                 </div>
                 <button className="filter-btn"
                     onClick={() => {
-                        const filteredList = listOfRestaurant.filter(
+                        const filteredList = listOfRestaurant?.filter(
                             (res) => res.info.avgRating > 4
                         );
                         setFilteredRestaurant(filteredList);
@@ -85,10 +87,12 @@ const Body = () => {
 
             </div>
             <div className="res-container">
-                {filteredRestaurant.map((restaurant) => (
-                    <RestaurantCard key={
-                        restaurant.info.id} resData=
-                        {restaurant} />))
+                {filteredRestaurant?.map((restaurant) => (
+                   <Link 
+                   key={restaurant.info.id} 
+                   to={"/restaurants/"+ restaurant.info.id}>
+                    <RestaurantCard  resData= {restaurant} />
+                    </Link> ))
 
                 }
 
