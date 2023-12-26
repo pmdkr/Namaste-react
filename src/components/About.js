@@ -5,7 +5,7 @@ const About =()=>{
 
     return(
         <div>
-            <h2>This is about us page</h2>
+            <h2 className=" p-2 m-2 font-bold justify-center">This is about us page</h2>
             <AboutClass/>
         </div>
     )

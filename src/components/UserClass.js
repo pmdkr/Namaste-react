@@ -42,10 +42,10 @@ class UserClass extends React.Component {
 
         return (
 
-            <div className="user-card">
+            <div className=" justify-between m-2 w-9/12">
 
-                <img className="gitphoto" src={avatar_url}/>
-                <h3>Name:{name} </h3>
+                <img className="p-2 m-2 w-40 rounded-lg" src={avatar_url}/>
+                <h3 className=" font-bold text-lg">Name:{name} </h3>
                  <h3>location:{location}</h3>
                 {/* <h3>Contact: {contact}</h3>  */}
                 
