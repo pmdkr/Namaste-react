@@ -27,7 +27,7 @@ class UserClass extends React.Component {
         userInfo:json,
       });
       
-      console.log(json);
+    //   console.log(json);
       
 
     }
@@ -38,15 +38,15 @@ class UserClass extends React.Component {
         const { name,location ,avatar_url} = this.state.userInfo;
 
         const { count } = this.state;
-        console.log(this.props);
+        // console.log(this.props);
 
         return (
 
-            <div className=" justify-between m-2 w-9/12">
+            <div className="text-center">
 
-                <img className="p-2 m-2 w-40 rounded-lg" src={avatar_url}/>
-                <h3 className=" font-bold text-lg">Name:{name} </h3>
-                 <h3>location:{location}</h3>
+                <img className="w-40 m-auto " src={avatar_url}/>
+                <h3 className=" font-semibold text-lg">Name:{name} </h3>
+                 <h3 className=" font-semibold text-lg">location:{location}</h3>
                 {/* <h3>Contact: {contact}</h3>  */}
                 
 

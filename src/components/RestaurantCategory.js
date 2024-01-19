@@ -1,9 +1,12 @@
 
+import { useState } from "react";
 import ItemList from "./ItemList";
 const RestaurantCategory = ({ data, showItems, setShowIndex}) => {
+    const [show, setShow]=useState(false);
 
     const handleClick = () => {
         setShowIndex();
+        setShow(!show);
     }
 
     return (
@@ -15,11 +18,11 @@ const RestaurantCategory = ({ data, showItems, setShowIndex}) => {
                 <div className="justify-between flex cursor-pointer" onClick={handleClick}>
                     <span className="  font-bold text-sm ">
                         {data.title} ({data.itemCards.length})</span>
-                    <span>🔽</span>
+                    <span>🔻</span>
                 </div>
 
                 {/* <ItemList items={data.itemCards}/> */}
-                {showItems && <ItemList items={data.itemCards}/>}
+                {showItems && show && <ItemList items={data.itemCards}/>}
             </div>
             {/* {Accordian body } */}
 
