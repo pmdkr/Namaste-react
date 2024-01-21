@@ -2,7 +2,7 @@
   "name": "namaste-react",
   "version": "1.0.0",
   "description": "this is namaste react by Pramod Lohra",
-  "main": "App.js",
+  "main": "App.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
