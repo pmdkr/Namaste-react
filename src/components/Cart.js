@@ -19,7 +19,7 @@ const Cart = () => {
                 <button className="p-2 m-2 border to-black text-lg font-semibold bg-gray-200 rounded-md" onClick={handleClearCart}> Clear Cart</button>
             </div>
 
-            <div className="w-6/12 mx-auto">
+            <div className="w-6/12 mx-auto bg-gray-100">
                 <ItemList items={cartItems} />
             </div>
 

@@ -4,7 +4,6 @@
   "description": "this is namaste react by Pramod Lohra",
   "main": "App.js",
   "scripts": {
-    "test": "jest",
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
