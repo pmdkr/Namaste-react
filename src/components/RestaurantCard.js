@@ -21,7 +21,7 @@ const RestaurantCard = (props) => {
 
 
     return (
-        <div className="p-2 m-2 w-[256px] bg-gray-100 rounded-2xl">
+        <div className="p-2 m-2 w-[256px] bg-white rounded-lg shadow-md">
             <div className="w-auto">
                 <img className=" w-full h-44 rounded-md"
                     alt="res-logo"
@@ -30,11 +30,15 @@ const RestaurantCard = (props) => {
             </div>
 
             <div className="w-auto">
-                <h3 className="text-left text-lg text font-bold my-2">{name}</h3>
+                <h3 className="text-left text-lg text font-bold mt-2">{name}</h3>
                 <h5 className="text-left text-sm ">{cuisines.join(", ")} </h5>
                 <h5 className="text-left text-sm">{locality}</h5>
-                <h5 className="text-left text-sm">{sla.deliveryTime} mins</h5>
-                <h5 className="text-left text-sm">{avgRating +" ⭐"}</h5>
+                <div className="flex">
+                    <h5 className="text-left text-sm text-yellow-600">{"⭐ " + avgRating   }</h5>
+                    <h5 className="text_left text-sm ml-4">{sla.deliveryTime} mins</h5>
+
+                </div>
+
             </div>
 
 

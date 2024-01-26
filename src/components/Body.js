@@ -1,12 +1,11 @@
 import RestaurantCard, { withPromtedLabel } from "./RestaurantCard"
-
-import { resList } from "../utils/mockData"
 import { API_URL } from "../utils/constants";
 import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import UserContext from "../utils/UserContext";
+import Carousal from "./Carousal";
+
 
 const Body = () => {
 
@@ -14,9 +13,6 @@ const Body = () => {
     const [listOfRestaurant, setListOfRestaurant] = useState([]);
     const [filteredRestaurant, setFilteredRestaurant] = useState([]);
     const onlineStatus = useOnlineStatus();
-
-    const { setUserName } = useContext(UserContext);
-
 
     // Whenever state variable updated, reconcilation cycle started(re -render the component).
     const RestaurantCardPromted = withPromtedLabel(RestaurantCard);
@@ -34,10 +30,11 @@ const Body = () => {
         const data = await fetch(API_URL);
 
         const json = await data.json();
+
         // console.log(json);
         setListOfRestaurant(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        // console.log(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     };
 
@@ -52,9 +49,10 @@ const Body = () => {
 
 
     return (
-        <div className="body">
+        <div className=" bg-gray-100">
+
             <div className="flex p-2 m-2 ">
-                <button className="m-2 p-2 ml-14 font-semibold bg-zinc-200 rounded-md hover:cursor-pointer"
+                <button className="m-2 p-2 ml-14 font-semibold text-stone-500 bg-zinc-200 rounded-md hover:cursor-pointer"
                     onClick={() => {
                         const filteredList = listOfRestaurant?.filter(
                             (res) => res.info.avgRating > 4
@@ -69,7 +67,7 @@ const Body = () => {
                 </button>
                 <div className="flex ml-40 ">
                     <input type="text"
-                        className="m-2 p-2 border w-96 rounded-md"
+                        className="my-2 ml-2 p-2 border w-96 rounded-l-full"
                         value={searchText}
 
                         onChange={(e) => {
@@ -78,7 +76,7 @@ const Body = () => {
 
                         }}></input>
 
-                    <button className="m-2 p-2 bg-teal-300 rounded-md font-semibold" onClick={() => {
+                    <button className="my-2 p-2 px-6 bg-zinc-200 rounded-r-full font-semibold" onClick={() => {
 
                         //filter the restaurant cards and upadate the UI
                         const filteredListOfRestaurant = listOfRestaurant?.filter(
@@ -89,7 +87,7 @@ const Body = () => {
                         setFilteredRestaurant(filteredListOfRestaurant);
                         // searchtext
                         console.log(searchText);
-                    }}> Search</button>
+                    }}><img className="w-6" src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" /></button>
 
 
                 </div>
@@ -99,6 +97,10 @@ const Body = () => {
                     <input className="border border-black m-2 p-2" onChange={(e)=>setUserName(e.target.value)}></input>
                 </div> */}
 
+
+            </div>
+            <div className="m-2">
+                <Carousal />
 
             </div>
             <div className="flex flex-wrap p-4 justify-evenly">
@@ -116,10 +118,6 @@ const Body = () => {
                     </Link>))
 
                 }
-
-
-
-
 
             </div>
         </div>

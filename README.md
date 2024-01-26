@@ -23,3 +23,8 @@ Namaste food using swiggy app data :
     -links(Instagram, fb, twiter)
 
 */
+
+
+# setting up the React Testing Library 
+
+

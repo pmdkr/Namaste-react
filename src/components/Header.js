@@ -19,9 +19,9 @@ const Header = () => {
 
 
     return (
-        <div className="flex justify-between bg-teal-100 bg shadow-lg">
+        <div className="flex justify-between bg-white bg shadow-lg">
 
-            <div className="logo-container content-between m-2 p-2 w-24">
+            <div className="content-between m-2 ml-10 p-2 pt-6 w-20 h-full text-center">
                 <img className="w-full" src={LOGO_URL} />
             </div>
             <div className="nav-items">
@@ -45,7 +45,7 @@ const Header = () => {
                         }
                     >{btnName}</button>
                     </li>
-                    <li className="p-2 m-2 pr-2 font-semibold">{loggedInUser}</li>
+                    <li className="p-2 m-2 pr-2">{loggedInUser}</li>
 
                 </ul>
             </div>
