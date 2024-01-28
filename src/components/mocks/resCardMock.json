@@ -1,0 +1,71 @@
+{
+    "info": {
+        "id": "702073",
+        "name": "Biggies Burger",
+        "cloudinaryImageId": "49d60c8b2a966219918f28a6ffe15d05",
+        "locality": "Adarsh Nagar",
+        "areaName": "Kanke",
+        "costForTwo": "₹300 for two",
+        "cuisines": [
+            "American",
+            "Fast Food",
+            "Beverages"
+        ],
+        "avgRating": 4.2,
+        "parentId": "45723",
+        "avgRatingString": "4.2",
+        "totalRatingsString": "100+",
+        "sla": {
+            "deliveryTime": 27,
+            "lastMileTravel": 1.7,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "1.7 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-01-27 23:00:00",
+            "opened": true
+        },
+        "badges": {},
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {},
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "30% OFF",
+            "subHeader": "UPTO ₹75"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {}
+    },
+    "analytics": {
+        "context": "seo-data-76bd01ee-5d3d-4a50-a8b8-a0a6551b6879"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/restaurants/biggies-burger-adarsh-nagar-kanke-ranchi-702073",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+}

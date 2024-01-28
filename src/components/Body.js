@@ -34,7 +34,7 @@ const Body = () => {
         // console.log(json);
         setListOfRestaurant(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setFilteredRestaurant(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // console.log(json.data.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     };
 
@@ -52,14 +52,15 @@ const Body = () => {
         <div className=" bg-gray-100">
 
             <div className="flex p-2 m-2 ">
-                <button className="m-2 p-2 ml-14 font-semibold text-stone-500 bg-zinc-200 rounded-md hover:cursor-pointer"
+                <button data-testid = "filterButton" 
+                className="m-2 p-2 ml-14 font-semibold text-zinc-900 bg-zinc-200 rounded-md hover:cursor-pointer"
                     onClick={() => {
                         const filteredList = listOfRestaurant?.filter(
                             (res) => res.info.avgRating > 4
                         );
                         setFilteredRestaurant(filteredList);
 
-                        console.log(filteredList);
+                        // console.log(filteredList);
                     }
 
                     }
@@ -67,6 +68,8 @@ const Body = () => {
                 </button>
                 <div className="flex ml-40 ">
                     <input type="text"
+                    data-testid="searchInput"
+                    placeholder="Search"
                         className="my-2 ml-2 p-2 border w-96 rounded-l-full"
                         value={searchText}
 
@@ -86,8 +89,8 @@ const Body = () => {
 
                         setFilteredRestaurant(filteredListOfRestaurant);
                         // searchtext
-                        console.log(searchText);
-                    }}><img className="w-6" src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" /></button>
+                        // console.log(searchText);
+                    }}><img alt="Search" className="w-6" src="https://www.iconpacks.net/icons/2/free-search-icon-2903-thumb.png" /></button>
 
 
                 </div>

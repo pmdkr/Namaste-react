@@ -26,9 +26,8 @@ const Header = () => {
             </div>
             <div className="nav-items">
                 <ul className="flex m-4 p-4 justify-between">
-                    <li className="p-2 m-2 pr-2">Online Status : {onlineStatus ? "✅" : "🔴"}
-
-                    </li>
+                    <li className="p-2 m-2 pr-2">Online Status : {onlineStatus ? "✅" : "🔴"}</li>
+                    {/* <li className="p-2 ml-2 my-2 pr-2"><Link to="/"><img className="w-6" src="https://static.vecteezy.com/system/resources/thumbnails/010/157/862/small/house-and-home-icon-symbol-sign-free-png.png"/></Link></li> */}
                     <li className="p-2 m-2 pr-2"><Link to="/">Home</Link></li>
                     <li className="p-2 m-2 pr-2"><Link to="/about">About Us</Link></li>
                     <li className="p-2 m-2 pr-2"><Link to="/contact">Contact Us</Link></li>
@@ -39,7 +38,7 @@ const Header = () => {
                     <button
                         onClick={() => {
                             btnName === "Login" ? setBtnName("Logout") : setBtnName("Login");
-                            console.log("login button clicked");
+                            // console.log("login button clicked");
 
                         }
                         }

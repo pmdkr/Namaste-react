@@ -6,6 +6,7 @@ import { resList } from "../utils/mockData";
 const RestaurantCard = (props) => {
 
     const { resData } = props;
+    // console.log(resData);
 
     const {
         cloudinaryImageId,
@@ -21,7 +22,7 @@ const RestaurantCard = (props) => {
 
 
     return (
-        <div className="p-2 m-2 w-[256px] bg-white rounded-lg shadow-md">
+        <div data-testid = "resCard" className="p-2 m-2 w-[256px] bg-white rounded-lg shadow-md">
             <div className="w-auto">
                 <img className=" w-full h-44 rounded-md"
                     alt="res-logo"
