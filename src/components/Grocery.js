@@ -2,8 +2,8 @@ const Grocery=()=>{
 
 
     return(
-        <div>
-            <h1>this is Grocery page and it have lot of sub commponets here</h1>
+        <div className="w-9/12 text-center  flex justify-center">
+            <h1 className="font-bold text-2xl p-10 m-10">This is Grocery component an example of Lazy loading</h1>
         </div>
     )
 

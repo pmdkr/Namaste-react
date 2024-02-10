@@ -24,7 +24,7 @@ class AboutClass extends React.Component {
 
             <div className="text-center">
                 <UserContext.Consumer>
-                    {(data)=> <h1 className=" p-2 m-2 font-semibold">{data.loggedInUser}</h1>}
+                    {(data)=> <h1 className=" p-2 m-2 font-semibold"> Logged User : {data.loggedInUser}</h1>}
                 </UserContext.Consumer>
 
                 <UserClass name={"Pramod Lohra"} location={"Ranchi"} contact={"pramodkrlohra@gmal.com"} />

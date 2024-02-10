@@ -49,11 +49,11 @@ const Body = () => {
 
 
     return (
-        <div className=" bg-gray-100">
+        <div>
 
             <div className="flex p-2 m-2 ">
-                <button data-testid = "filterButton" 
-                className="m-2 p-2 ml-14 font-semibold text-zinc-900 bg-zinc-200 rounded-md hover:cursor-pointer"
+                <button data-testid="filterButton"
+                    className="m-2 p-2 ml-14 font-semibold border border-orange-500 text-zinc-900 bg-zinc-200 rounded-md hover:cursor-pointer"
                     onClick={() => {
                         const filteredList = listOfRestaurant?.filter(
                             (res) => res.info.avgRating > 4
@@ -68,9 +68,9 @@ const Body = () => {
                 </button>
                 <div className="flex ml-40 ">
                     <input type="text"
-                    data-testid="searchInput"
-                    placeholder="Search"
-                        className="my-2 ml-2 p-2 border w-96 rounded-l-full"
+                        data-testid="searchInput"
+                        placeholder="Search"
+                        className="my-2 ml-2 p-2 w-96 rounded-l-full  border border-orange-500 "
                         value={searchText}
 
                         onChange={(e) => {
@@ -79,7 +79,7 @@ const Body = () => {
 
                         }}></input>
 
-                    <button className="my-2 p-2 px-6 bg-zinc-200 rounded-r-full font-semibold" onClick={() => {
+                    <button className="my-2 p-2 px-6 border border-orange-600 bg-zinc-200 rounded-r-full" onClick={() => {
 
                         //filter the restaurant cards and upadate the UI
                         const filteredListOfRestaurant = listOfRestaurant?.filter(

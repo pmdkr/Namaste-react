@@ -60,7 +60,7 @@ const approuter = createBrowserRouter([
             },
             {
                 path: "/about",
-                element: <About />
+                element:<Suspense fallback={<h3>the about page is loading</h3>} ><About /> </Suspense> 
             },
             {
                 path: "/contact",

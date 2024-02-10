@@ -35,7 +35,12 @@ const RestaurantCard = (props) => {
                 <h5 className="text-left text-sm ">{cuisines.join(", ")} </h5>
                 <h5 className="text-left text-sm">{locality}</h5>
                 <div className="flex">
-                    <h5 className="text-left text-sm text-yellow-600">{"⭐ " + avgRating   }</h5>
+                    <div className="flex justify-normal ">
+                        <img  className=" w-5 mr-2 text-left" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXUh58nagKKs3cnhv647ZEB4WaEPfig_6w2pC7eSKoG6Yw2eDpBNPj-29GaqPW3SzEVJ8&usqp=CAU"/>
+                    <h5 className="text-left text-sm font-semibold text-gray-900">{avgRating}</h5>
+
+                    </div>
+                    
                     <h5 className="text_left text-sm ml-4">{sla.deliveryTime} mins</h5>
 
                 </div>
